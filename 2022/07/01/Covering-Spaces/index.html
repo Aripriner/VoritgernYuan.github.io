@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Here I want to summarize the basic results of covering spaces. My reference book is May&#39;s A Concise Course in Algebraic Topology.  The definition of covering spaces Definition. A map \(p: E \righ">
+  <meta name="description" content="Here I want to summarize the basic results of covering spaces. My reference book is May’s A Concise Course in Algebraic Topology.   The definition of covering spacesDefinition. A map $p: E \rightarrow">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Covering Spaces">
 <meta property="og:url" content="http://example.com/2022/07/01/Covering-Spaces/index.html">
 <meta property="og:site_name" content="Vortigern&#39;s mathematical notes">
-<meta property="og:description" content="Here I want to summarize the basic results of covering spaces. My reference book is May&#39;s A Concise Course in Algebraic Topology.  The definition of covering spaces Definition. A map \(p: E \righ">
+<meta property="og:description" content="Here I want to summarize the basic results of covering spaces. My reference book is May’s A Concise Course in Algebraic Topology.   The definition of covering spacesDefinition. A map $p: E \rightarrow">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-01T08:35:06.000Z">
-<meta property="article:modified_time" content="2022-07-01T09:52:49.541Z">
+<meta property="article:modified_time" content="2022-07-01T11:02:10.644Z">
 <meta property="article:author" content="Weijun Yuan">
 <meta property="article:tag" content="Algebraic Topology">
 <meta name="twitter:card" content="summary">
@@ -190,7 +190,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-07-01 16:35:06 / Modified: 17:52:49" itemprop="dateCreated datePublished" datetime="2022-07-01T16:35:06+08:00">2022-07-01</time>
+              <time title="Created: 2022-07-01 16:35:06 / Modified: 19:02:10" itemprop="dateCreated datePublished" datetime="2022-07-01T16:35:06+08:00">2022-07-01</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -213,115 +213,24 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Here I want to summarize the basic results of covering spaces. My
-reference book is May's A Concise Course in Algebraic Topology.</p>
-<hr />
-<h1 id="the-definition-of-covering-spaces">The definition of covering
-spaces</h1>
-<p>Definition. A map <span class="math inline">\(p: E \rightarrow
-B\)</span> is a covering if it is surjective and if each point <span
-class="math inline">\(b \in B\)</span> has an open neighborhood <span
-class="math inline">\(V\)</span> such that each component of <span
-class="math inline">\(p^{-1}(V)\)</span> is open in <span
-class="math inline">\(E\)</span> and is mapped homeomorphically onto
-<span class="math inline">\(V\)</span> by <span
-class="math inline">\(p\)</span>. We say that a path connected open
-subset <span class="math inline">\(V\)</span> with this property is a
-fundamental neighborhood of <span class="math inline">\(B\)</span>. We
-call <span class="math inline">\(E\)</span> the total space, <span
-class="math inline">\(B\)</span> the base space, and <span
-class="math inline">\(F_b=p^{-1}(b)\)</span> a fiber of the covering
-<span class="math inline">\(p\)</span>.</p>
-<h1 id="the-unique-path-lifting-property">The unique path lifting
-property</h1>
-<p>Theorem(Unique path lifting). Let <span
-class="math inline">\(p:E\rightarrow B\)</span> be a covering, let <span
-class="math inline">\(b\in B\)</span>, and let <span
-class="math inline">\(e,e&#39;\in F_b\)</span>.</p>
-<ol type="1">
-<li>A path <span class="math inline">\(f:I\rightarrow B\)</span> with
-<span class="math inline">\(f(0)=b\)</span> lifts uniquely to a path
-<span class="math inline">\(g:I \rightarrow E\)</span> such that <span
-class="math inline">\(g(0)=e\)</span> and <span
-class="math inline">\(p\circ q=f\)</span>.</li>
-<li>Equivalent paths <span class="math inline">\(f\simeq
-f&#39;:I\rightarrow B\)</span> that start at <span
-class="math inline">\(b\)</span> lift to eqyivalent paths <span
-class="math inline">\(g\simeq g&#39;:I\rightarrow E\)</span> that start
-at <span class="math inline">\(e\)</span>, hence <span
-class="math inline">\(g(1)=g&#39;(1)\)</span>.</li>
-<li><span class="math inline">\(p_*:\pi_1(E,e) \rightarrow
-\pi_1(B,b)\)</span> is a monomorphism.</li>
-<li><span class="math inline">\(p_*(\pi_1(E,e))\)</span> is conjugate to
-<span class="math inline">\(p_*(\pi_1(E,e&#39;))\)</span>.</li>
-<li>As <span class="math inline">\(e&#39;\)</span> runs through <span
-class="math inline">\(F_b\)</span>, the groups <span
-class="math inline">\(p_*(\pi_1(E,e&#39;))\)</span> all conjugates of
-<span class="math inline">\(p_*(\pi_1(E,e))\)</span> in <span
-class="math inline">\(\pi_1(B,b)\)</span>.</li>
+        <p>Here I want to summarize the basic results of covering spaces. My reference book is May’s A Concise Course in Algebraic Topology. </p>
+<hr>
+<h1 id="The-definition-of-covering-spaces"><a href="#The-definition-of-covering-spaces" class="headerlink" title="The definition of covering spaces"></a>The definition of covering spaces</h1><p><strong>Definition</strong>. A map $p: E \rightarrow B$ is a covering if it is surjective and if each point $b \in B$ has an open neighborhood $V$ such that each component of $p^{-1}(V)$ is open in $E$ and is mapped homeomorphically onto $V$ by $p$. We say that a path connected open subset $V$ with this property is a fundamental neighborhood of $B$. We call $E$ the total space, $B$ the base space, and $F_b=p^{-1}(b)$ a fiber of the covering $p$.</p>
+<h1 id="The-unique-path-lifting-property"><a href="#The-unique-path-lifting-property" class="headerlink" title="The unique path lifting property"></a>The unique path lifting property</h1><p><strong>Theorem(Unique path lifting)</strong>. Let $p:E\rightarrow B$ be a covering, let $b\in B$, and let $e,e’\in F_b$.</p>
+<ol>
+<li>A path $f:I\rightarrow B$ with $f(0)=b$ lifts uniquely to a path $g:I \rightarrow E$ such that $g(0)=e$ and $p\circ q=f$.</li>
+<li>Equivalent paths $f\simeq f’:I\rightarrow B$ that start at $b$ lift to eqyivalent paths $g\simeq g’:I\rightarrow E$ that start at $e$, hence $g(1)=g’(1)$.</li>
+<li>$p_*:\pi_1(E,e) \rightarrow \pi_1(B,b)$ is a monomorphism.</li>
+<li>$p_<em>(\pi_1(E,e))$ is conjugate to $p_</em>(\pi_1(E,e’))$.</li>
+<li>As $e’$ runs through $F_b$, the groups $p_<em>(\pi_1(E,e’))$ all conjugates of $p_</em>(\pi_1(E,e))$ in $\pi_1(B,b)$.</li>
 </ol>
-<h1 id="covering-of-groupoids">Covering of groupoids</h1>
-<p>Definition. Let <span class="math inline">\(\mathscr{E}\)</span> and
-<span class="math inline">\(\mathscr{B}\)</span> be small connected
-groupoids. A covering <span class="math inline">\(p:
-\mathscr{E}\rightarrow \mathscr{B}\)</span> is a functor that is
-surjective on objects and restricts to a bijection <span
-class="math display">\[p:St(e) \rightarrow St(p(e))\]</span> for each
-object <span class="math inline">\(e\)</span> of <span
-class="math inline">\(\mathscr{E}\)</span>. For an object <span
-class="math inline">\(b\)</span> of <span
-class="math inline">\(\mathscr{B}\)</span>, let <span
-class="math inline">\(F_b\)</span> denote the set of objects of <span
-class="math inline">\(\mathscr{E}\)</span> such that <span
-class="math inline">\(p(e)=b\)</span>. Then <span
-class="math inline">\(p^{-1}(St(b))\)</span> is the disjoint union over
-<span class="math inline">\(e\in F_b\)</span> of <span
-class="math inline">\(St(e)\)</span>.</p>
-<p>Lemma. Let <span class="math inline">\(G\)</span> act transitively on
-a set <span class="math inline">\(S\)</span>, choose <span
-class="math inline">\(s \in S\)</span>, and let <span
-class="math inline">\(H=G_s\)</span>. Then <span
-class="math inline">\(WH=N_G(H)/H\)</span> is isomorphic to the group
-<span class="math inline">\(Aut_G(S)\)</span> of the <span
-class="math inline">\(G\)</span>-set <span
-class="math inline">\(S\)</span>.</p>
-<p>Lemma. The category <span
-class="math inline">\(\mathscr{O}(G)\)</span> is isomorphic to the
-category <span class="math inline">\(\mathscr{G}\)</span> whose objects
-are the subgoups of <span class="math inline">\(G\)</span> and whose
-morphisms are the distinct subconjugacy relations <span
-class="math inline">\(\gamma^{-1}H\gamma\subset K\)</span> for <span
-class="math inline">\(\gamma \in G\)</span>.</p>
-<p>Theorem. Let <span class="math inline">\(p:\mathscr{E}\rightarrow
-\mathscr{B}\)</span> be a covering of groupoids, let <span
-class="math inline">\(\mathscr{X}\)</span> be a groupoid, anf let <span
-class="math inline">\(f:\mathscr{X} \rightarrow \mathscr{B}\)</span> be
-functor. Choose a base object <span class="math inline">\(x_0 \in
-\mathscr{X}\)</span>, let <span
-class="math inline">\(b_0=f(x_0)\)</span>, and choose <span
-class="math inline">\(e_0 \in F_{b_0}\)</span>. Then there is a functor
-<span class="math inline">\(g:\mathscr{X}\rightarrow\mathscr{E}\)</span>
-such that <span class="math inline">\(g(x_0)=e_0\)</span> and <span
-class="math inline">\(p\circ g =f\)</span> if and only if <span
-class="math display">\[f(\pi_1(\mathscr{X},x_0)) \subset
-p(\pi_1(\mathscr{E},x_0))\]</span> in <span
-class="math inline">\(\pi_1(\mathscr{B},b_0)\)</span>. When this
-condition holds, there is a unique such functor <span
-class="math inline">\(g\)</span>.</p>
-<p>Theorem. Let <span
-class="math inline">\(p:\mathscr{E}\rightarrow\mathscr{B}\)</span> and
-<span class="math inline">\(p&#39;:\mathscr{E}&#39;\rightarrow
-\mathscr{B}\)</span> be coverings, choose a base object <span
-class="math inline">\(b \in \mathscr{B}\)</span>, and let <span
-class="math inline">\(G=\pi_1(\mathscr{B},b_0)\)</span>. If <span
-class="math inline">\(g:\mathscr{E}\rightarrow\mathscr{E}&#39;\)</span>
-is a map of coverings, then <span class="math inline">\(g\)</span>
-restricts to a map <span class="math inline">\(F_b\rightarrow
-F_b&#39;\)</span> of <span class="math inline">\(G\)</span>-sets,and
-restriction of fibers specifies a bijection between <span
-class="math inline">\(Cov(\mathscr{E},\mathscr{E}&#39;)\)</span> and the
-set of <span class="math inline">\(G\)</span>- maps <span
-class="math inline">\(F_b\rightarrow F_b&#39;\)</span>.</p>
+<h1 id="Covering-of-groupoids"><a href="#Covering-of-groupoids" class="headerlink" title="Covering of groupoids"></a>Covering of groupoids</h1><p><strong>Definition</strong>. Let $\mathscr{E}$ and $\mathscr{B}$ be small connected groupoids. A covering $p: \mathscr{E}\rightarrow \mathscr{B}$ is a functor that is surjective on objects and restricts to a bijection</p>
+<script type="math/tex; mode=display">p:St(e) \rightarrow St(p(e))</script><p>for each object $e$ of $\mathscr{E}$. For an object $b$ of $\mathscr{B}$, let $F_b$ denote the set of objects of $\mathscr{E}$ such that $p(e)=b$. Then $p^{-1}(St(b))$ is the disjoint union over $e\in F_b$ of $St(e)$.</p>
+<p><strong>Lemma</strong>. Let $G$ act transitively on a set $S$, choose $s \in S$, and let $H=G_s$. Then $WH=N_G(H)/H$ is isomorphic to the group $Aut_G(S)$ of the $G$-set $S$. </p>
+<p><strong>Lemma</strong>. The category $\mathscr{O}(G)$ is isomorphic to the category $\mathscr{G}$ whose objects are the subgoups of $G$ and whose morphisms are the distinct subconjugacy relations $\gamma^{-1}H\gamma\subset K$ for $\gamma \in G$. </p>
+<p><strong>Theorem</strong>. Let $p:\mathscr{E}\rightarrow \mathscr{B}$ be a covering of groupoids, let $\mathscr{X}$ be a groupoid, anf let $f:\mathscr{X} \rightarrow \mathscr{B}$ be functor. Choose a base object $x_0 \in \mathscr{X}$, let $b_0=f(x_0)$, and choose $e_0 \in F_{b_0}$. Then there is a functor $g:\mathscr{X}\rightarrow\mathscr{E}$ such that $g(x_0)=e_0$ and $p\circ g =f$ if and only if </p>
+<script type="math/tex; mode=display">f(\pi_1(\mathscr{X},x_0)) \subset p(\pi_1(\mathscr{E},x_0))</script><p>in $\pi_1(\mathscr{B},b_0)$. When this condition holds, there is a unique such functor $g$.</p>
+<p><strong>Theorem</strong>. Let $p:\mathscr{E}\rightarrow\mathscr{B}$ and $p’:\mathscr{E}’\rightarrow \mathscr{B}$ be coverings, choose a base object $b \in \mathscr{B}$, and let $G=\pi_1(\mathscr{B},b_0)$. If $g:\mathscr{E}\rightarrow\mathscr{E}’$ is a map of coverings, then $g$ restricts to a map $F_b\rightarrow F_b’$ of $G$-sets,and restriction of fibers specifies a bijection between $Cov(\mathscr{E},\mathscr{E}’)$ and the set of $G$- maps $F_b\rightarrow F_b’$. </p>
 
     </div>
 
@@ -402,9 +311,7 @@ class="math inline">\(F_b\rightarrow F_b&#39;\)</span>.</p>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#the-definition-of-covering-spaces"><span class="nav-number">1.</span> <span class="nav-text">The definition of covering
-spaces</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#the-unique-path-lifting-property"><span class="nav-number">2.</span> <span class="nav-text">The unique path lifting
-property</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#covering-of-groupoids"><span class="nav-number">3.</span> <span class="nav-text">Covering of groupoids</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#The-definition-of-covering-spaces"><span class="nav-number">1.</span> <span class="nav-text">The definition of covering spaces</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-unique-path-lifting-property"><span class="nav-number">2.</span> <span class="nav-text">The unique path lifting property</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Covering-of-groupoids"><span class="nav-number">3.</span> <span class="nav-text">Covering of groupoids</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
