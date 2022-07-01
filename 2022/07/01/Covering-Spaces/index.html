@@ -20,21 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Today I meet a problem from Serge Lang&#39;s Algebra: &gt;Let E be a finite extension of k and let \(p^r&#x3D;[E:k]_i\). We assume that the characteristic is \(p&gt;0\). Assume that there is no exponent \(p">
+  <meta name="description" content="Here I want to summarize the basic results of covering spaces. My reference book is May&#39;s A Concise Course in Algebraic Topology. The definition of covering spaces Definition. A map \(p: E \right">
 <meta property="og:type" content="article">
-<meta property="og:title" content="A Problem about Field Extension">
-<meta property="og:url" content="http://example.com/2022/06/26/A-Problem-about-Field-Extension/index.html">
+<meta property="og:title" content="Covering Spaces">
+<meta property="og:url" content="http://example.com/2022/07/01/Covering-Spaces/index.html">
 <meta property="og:site_name" content="Vortigern&#39;s mathematical notes">
-<meta property="og:description" content="Today I meet a problem from Serge Lang&#39;s Algebra: &gt;Let E be a finite extension of k and let \(p^r&#x3D;[E:k]_i\). We assume that the characteristic is \(p&gt;0\). Assume that there is no exponent \(p">
+<meta property="og:description" content="Here I want to summarize the basic results of covering spaces. My reference book is May&#39;s A Concise Course in Algebraic Topology. The definition of covering spaces Definition. A map \(p: E \right">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-06-26T08:37:26.000Z">
-<meta property="article:modified_time" content="2022-06-26T09:59:14.412Z">
+<meta property="article:published_time" content="2022-07-01T08:35:06.000Z">
+<meta property="article:modified_time" content="2022-07-01T09:48:56.024Z">
 <meta property="article:author" content="Weijun Yuan">
-<meta property="article:tag" content="Field Theory">
-<meta property="article:tag" content="Galois Theory">
+<meta property="article:tag" content="Algebraic Topology">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2022/06/26/A-Problem-about-Field-Extension/">
+<link rel="canonical" href="http://example.com/2022/07/01/Covering-Spaces/">
 
 
 <script id="page-configurations">
@@ -47,7 +46,7 @@
   };
 </script>
 
-  <title>A Problem about Field Extension | Vortigern's mathematical notes</title>
+  <title>Covering Spaces | Vortigern's mathematical notes</title>
   
 
 
@@ -167,7 +166,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/26/A-Problem-about-Field-Extension/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/07/01/Covering-Spaces/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -180,7 +179,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          A Problem about Field Extension
+          Covering Spaces
         </h1>
 
         <div class="post-meta">
@@ -191,7 +190,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-06-26 16:37:26 / Modified: 17:59:14" itemprop="dateCreated datePublished" datetime="2022-06-26T16:37:26+08:00">2022-06-26</time>
+              <time title="Created: 2022-07-01 16:35:06 / Modified: 17:48:56" itemprop="dateCreated datePublished" datetime="2022-07-01T16:35:06+08:00">2022-07-01</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -199,7 +198,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Problem/" itemprop="url" rel="index"><span itemprop="name">Problem</span></a>
+                  <a href="/categories/Summary/" itemprop="url" rel="index"><span itemprop="name">Summary</span></a>
                 </span>
             </span>
 
@@ -214,47 +213,116 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Today I meet a problem from Serge Lang's Algebra: &gt;Let E be a
-finite extension of k and let <span
-class="math inline">\(p^r=[E:k]_i\)</span>. We assume that the
-characteristic is <span class="math inline">\(p&gt;0\)</span>. Assume
-that there is no exponent <span class="math inline">\(p^s\)</span> with
-<span class="math inline">\(s&gt;r\)</span> such that <span
-class="math inline">\(E^{p^s}k\)</span> is separable over k(i.e.,such
-that <span class="math inline">\(\alpha^{p^s}\)</span> is separable over
-k for each <span class="math inline">\(\alpha\)</span> in E). Show that
-E can be generated by one element over k.</p>
-<p>The key step of the problem is the lemma below: &gt;k is an infinite
-field. <span class="math inline">\(\alpha\)</span> and <span
-class="math inline">\(\beta\)</span> are algebraic over k. And <span
-class="math inline">\(\alpha\)</span> is separable over k. Then <span
-class="math inline">\(k(\alpha,\beta)\)</span> can be generated by one
-element.</p>
-<p>We will give a brief outline of the proof.Denote <span
-class="math inline">\(s=t\alpha+\beta\)</span>. Denote f(x) and g(x) as
-the minimal polynomial of <span class="math inline">\(\alpha\)</span>
-and <span class="math inline">\(\beta\)</span> over k . Then <span
-class="math inline">\(g(s-tx)\)</span> has a root <span
-class="math inline">\(\alpha\)</span>. So the minimal polynomial of
-<span class="math inline">\(\alpha\)</span> over <span
-class="math inline">\(k(s)\)</span> divides <span
-class="math inline">\(g(s-tx)\)</span>. If <span
-class="math inline">\(\alpha \notin k(s)\)</span>, for <span
-class="math inline">\(\alpha\)</span> is separable, the degree of the
-common factor of <span class="math inline">\(f(x)\)</span> and <span
-class="math inline">\(g(s-tx)\)</span> is not smaller than 2. We have
-<span class="math inline">\(\alpha&#39;\)</span> and <span
-class="math inline">\(\beta&#39;\)</span> such that <span
-class="math inline">\(t\alpha+\beta=t\alpha&#39;+\beta&#39;\)</span>. So
-<span class="math display">\[t=\frac{\beta &#39;-\beta}{\alpha-\alpha
-&#39;}\]</span> Now we know that the number of <span
-class="math inline">\(\alpha&#39;,\beta&#39;\)</span> is finite..But the
-choice of t is infinite. So we must have a t suche that <span
-class="math inline">\(\alpha \in k(\alpha+t\beta)\)</span> for some t.
-Finally <span class="math inline">\(\alpha+t\beta\)</span> is what we
-need.</p>
-<p>I think the skill used in the proof is standard but interesting if
-you first see it. I like it.</p>
+        <h2
+id="here-i-want-to-summarize-the-basic-results-of-covering-spaces.-my-reference-book-is-mays-a-concise-course-in-algebraic-topology.">Here
+I want to summarize the basic results of covering spaces. My reference
+book is May's A Concise Course in Algebraic Topology.</h2>
+<h1 id="the-definition-of-covering-spaces">The definition of covering
+spaces</h1>
+<p>Definition. A map <span class="math inline">\(p: E \rightarrow
+B\)</span> is a covering if it is surjective and if each point <span
+class="math inline">\(b \in B\)</span> has an open neighborhood <span
+class="math inline">\(V\)</span> such that each component of <span
+class="math inline">\(p^{-1}(V)\)</span> is open in <span
+class="math inline">\(E\)</span> and is mapped homeomorphically onto
+<span class="math inline">\(V\)</span> by <span
+class="math inline">\(p\)</span>. We say that a path connected open
+subset <span class="math inline">\(V\)</span> with this property is a
+fundamental neighborhood of <span class="math inline">\(B\)</span>. We
+call <span class="math inline">\(E\)</span> the total space, <span
+class="math inline">\(B\)</span> the base space, and <span
+class="math inline">\(F_b=p^{-1}(b)\)</span> a fiber of the covering
+<span class="math inline">\(p\)</span>.</p>
+<h1 id="the-unique-path-lifting-property">The unique path lifting
+property</h1>
+<p>Theorem(Unique path lifting). Let <span
+class="math inline">\(p:E\rightarrow B\)</span> be a covering, let <span
+class="math inline">\(b\in B\)</span>, and let <span
+class="math inline">\(e,e&#39;\in F_b\)</span>.</p>
+<ol type="1">
+<li>A path <span class="math inline">\(f:I\rightarrow B\)</span> with
+<span class="math inline">\(f(0)=b\)</span> lifts uniquely to a path
+<span class="math inline">\(g:I \rightarrow E\)</span> such that <span
+class="math inline">\(g(0)=e\)</span> and <span
+class="math inline">\(p\circ q=f\)</span>.</li>
+<li>Equivalent paths <span class="math inline">\(f\simeq
+f&#39;:I\rightarrow B\)</span> that start at <span
+class="math inline">\(b\)</span> lift to eqyivalent paths <span
+class="math inline">\(g\simeq g&#39;:I\rightarrow E\)</span> that start
+at <span class="math inline">\(e\)</span>, hence <span
+class="math inline">\(g(1)=g&#39;(1)\)</span>.</li>
+<li><span class="math inline">\(p_*:\pi_1(E,e) \rightarrow
+\pi_1(B,b)\)</span> is a monomorphism.</li>
+<li><span class="math inline">\(p_*(\pi_1(E,e))\)</span> is conjugate to
+<span class="math inline">\(p_*(\pi_1(E,e&#39;))\)</span>.</li>
+<li>As <span class="math inline">\(e&#39;\)</span> runs through <span
+class="math inline">\(F_b\)</span>, the groups <span
+class="math inline">\(p_*(\pi_1(E,e&#39;))\)</span> all conjugates of
+<span class="math inline">\(p_*(\pi_1(E,e))\)</span> in <span
+class="math inline">\(\pi_1(B,b)\)</span>.</li>
+</ol>
+<h1 id="covering-of-groupoids">Covering of groupoids</h1>
+<p>Definition. Let <span class="math inline">\(\mathscr{E}\)</span> and
+<span class="math inline">\(\mathscr{B}\)</span> be small connected
+groupoids. A covering <span class="math inline">\(p:
+\mathscr{E}\rightarrow \mathscr{B}\)</span> is a functor that is
+surjective on objects and restricts to a bijection <span
+class="math display">\[p:St(e) \rightarrow St(p(e))\]</span> for each
+object <span class="math inline">\(e\)</span> of <span
+class="math inline">\(\mathscr{E}\)</span>. For an object <span
+class="math inline">\(b\)</span> of <span
+class="math inline">\(\mathscr{B}\)</span>, let <span
+class="math inline">\(F_b\)</span> denote the set of objects of <span
+class="math inline">\(\mathscr{E}\)</span> such that <span
+class="math inline">\(p(e)=b\)</span>. Then <span
+class="math inline">\(p^{-1}(St(b))\)</span> is the disjoint union over
+<span class="math inline">\(e\in F_b\)</span> of <span
+class="math inline">\(St(e)\)</span>.</p>
+<p>Lemma. Let <span class="math inline">\(G\)</span> act transitively on
+a set <span class="math inline">\(S\)</span>, choose <span
+class="math inline">\(s \in S\)</span>, and let <span
+class="math inline">\(H=G_s\)</span>. Then <span
+class="math inline">\(WH=N_G(H)/H\)</span> is isomorphic to the group
+<span class="math inline">\(Aut_G(S)\)</span> of the <span
+class="math inline">\(G\)</span>-set <span
+class="math inline">\(S\)</span>.</p>
+<p>Lemma. The category <span
+class="math inline">\(\mathscr{O}(G)\)</span> is isomorphic to the
+category <span class="math inline">\(\mathscr{G}\)</span> whose objects
+are the subgoups of <span class="math inline">\(G\)</span> and whose
+morphisms are the distinct subconjugacy relations <span
+class="math inline">\(\gamma^{-1}H\gamma\subset K\)</span> for <span
+class="math inline">\(\gamma \in G\)</span>.</p>
+<p>Theorem. Let <span class="math inline">\(p:\mathscr{E}\rightarrow
+\mathscr{B}\)</span> be a covering of groupoids, let <span
+class="math inline">\(\mathscr{X}\)</span> be a groupoid, anf let <span
+class="math inline">\(f:\mathscr{X} \rightarrow \mathscr{B}\)</span> be
+functor. Choose a base object <span class="math inline">\(x_0 \in
+\mathscr{X}\)</span>, let <span
+class="math inline">\(b_0=f(x_0)\)</span>, and choose <span
+class="math inline">\(e_0 \in F_{b_0}\)</span>. Then there is a functor
+<span class="math inline">\(g:\mathscr{X}\rightarrow\mathscr{E}\)</span>
+such that <span class="math inline">\(g(x_0)=e_0\)</span> and <span
+class="math inline">\(p\circ g =f\)</span> if and only if <span
+class="math display">\[f(\pi_1(\mathscr{X},x_0)) \subset
+p(\pi_1(\mathscr{E},x_0))\]</span> in <span
+class="math inline">\(\pi_1(\mathscr{B},b_0)\)</span>. When this
+condition holds, there is a unique such functor <span
+class="math inline">\(g\)</span>.</p>
+<p>Theorem. Let <span
+class="math inline">\(p:\mathscr{E}\rightarrow\mathscr{B}\)</span> and
+<span class="math inline">\(p&#39;:\mathscr{E}&#39;\rightarrow
+\mathscr{B}\)</span> be coverings, choose a base object <span
+class="math inline">\(b \in \mathscr{B}\)</span>, and let <span
+class="math inline">\(G=\pi_1(\mathscr{B},b_0)\)</span>. If <span
+class="math inline">\(g:\mathscr{E}\rightarrow\mathscr{E}&#39;\)</span>
+is a map of coverings, then <span class="math inline">\(g\)</span>
+restricts to a map <span class="math inline">\(F_b\rightarrow
+F_b&#39;\)</span> of <span class="math inline">\(G\)</span>-sets,and
+restriction of fibers specifies a bijection between <span
+class="math inline">\(Cov(\mathscr{E},\mathscr{E}&#39;)\)</span> and the
+set of <span class="math inline">\(G\)</span>- maps <span
+class="math inline">\(F_b\rightarrow F_b&#39;\)</span>.</p>
 
     </div>
 
@@ -264,8 +332,7 @@ you first see it. I like it.</p>
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Field-Theory/" rel="tag"># Field Theory</a>
-              <a href="/tags/Galois-Theory/" rel="tag"># Galois Theory</a>
+              <a href="/tags/Algebraic-Topology/" rel="tag"># Algebraic Topology</a>
           </div>
 
         
@@ -274,13 +341,10 @@ you first see it. I like it.</p>
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/06/24/My-Summer-Plan/" rel="prev" title="My Summer Plan">
-      <i class="fa fa-chevron-left"></i> My Summer Plan
+    <a href="/2022/06/26/A-Problem-about-Field-Extension/" rel="prev" title="A Problem about Field Extension">
+      <i class="fa fa-chevron-left"></i> A Problem about Field Extension
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/07/01/Covering-Spaces/" rel="next" title="Covering Spaces">
-      Covering Spaces <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -339,6 +403,11 @@ you first see it. I like it.</p>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#here-i-want-to-summarize-the-basic-results-of-covering-spaces.-my-reference-book-is-mays-a-concise-course-in-algebraic-topology."><span class="nav-number">1.</span> <span class="nav-text">Here
+I want to summarize the basic results of covering spaces. My reference
+book is May&#39;s A Concise Course in Algebraic Topology.</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#the-definition-of-covering-spaces"><span class="nav-number"></span> <span class="nav-text">The definition of covering
+spaces</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#the-unique-path-lifting-property"><span class="nav-number"></span> <span class="nav-text">The unique path lifting
+property</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#covering-of-groupoids"><span class="nav-number"></span> <span class="nav-text">Covering of groupoids</span></a></div>
       </div>
       <!--/noindex-->
 
